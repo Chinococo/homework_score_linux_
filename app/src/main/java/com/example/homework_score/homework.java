@@ -194,13 +194,14 @@ public class homework extends Fragment {
                     fireDB.addListenerForSingleValueEvent(new ValueEventListener() {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                            int min = Math.abs(
+                            int min =
+                                    Math.abs(
                                     (Integer.parseInt(
-                                            start_t.getText().toString().substring(0, 2)) * 60 + Integer.parseInt(
-                                            start_t.getText().toString().substring(3, 5))) -
-                                            (Integer.parseInt(
-                                                    end_t.getText().toString().substring(0, 2)) * 60 + Integer.parseInt(
-                                                    end_t.getText().toString().substring(3, 5))));
+                                    start_t.getText().toString().substring(0, 2)) * 60 + Integer.parseInt(
+                                    start_t.getText().toString().substring(3, 5))) -
+                                    (Integer.parseInt(
+                                    end_t.getText().toString().substring(0, 2)) * 60 + Integer.parseInt(
+                                    end_t.getText().toString().substring(3, 5))));
                             fireDB.child("homework").child(subject.getSelectedItem().toString()).child(charter.getSelectedItem().toString()).child(chartername.getSelectedItem().toString()).addListenerForSingleValueEvent(new ValueEventListener() {
                                 @Override
                                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {

@@ -55,7 +55,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 }
-
 class selection_screen extends FragmentPagerAdapter {
     public selection_screen(FragmentManager fragment) {
         super(fragment);
@@ -95,3 +94,4 @@ class selection_screen extends FragmentPagerAdapter {
 
 
 }
+
