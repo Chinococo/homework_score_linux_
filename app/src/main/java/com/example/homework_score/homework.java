@@ -209,6 +209,7 @@ public class homework extends Fragment {
                                     t.put("time",""+Integer.parseInt(dataSnapshot.getValue().toString())+min);
                                     t.put("start_time",start_t.getText().toString());
                                     t.put("end_time",end_t.getText().toString());
+                                    
                                     fireDB.child("homework")
                                             .child(subject.getSelectedItem()
                                             .toString()).child(charter
