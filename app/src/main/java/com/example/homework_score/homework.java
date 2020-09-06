@@ -34,7 +34,6 @@ import org.apache.http.message.BasicNameValuePair;
 
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.HashMap;
 
 
 /**
@@ -205,19 +204,7 @@ public class homework extends Fragment {
                             fireDB.child("homework").child(subject.getSelectedItem().toString()).child(charter.getSelectedItem().toString()).child(chartername.getSelectedItem().toString()).addListenerForSingleValueEvent(new ValueEventListener() {
                                 @Override
                                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                                    HashMap<String,String> t=new HashMap<>();
-                                    t.put("time",""+Integer.parseInt(dataSnapshot.getValue().toString())+min);
-                                    t.put("start_time",start_t.getText().toString());
-                                    t.put("end_time",end_t.getText().toString());
-                                    
-                                    fireDB.child("homework")
-                                            .child(subject.getSelectedItem()
-                                            .toString()).child(charter
-                                            .getSelectedItem().toString())
-                                            .child(chartername.getSelectedItem()
-                                            .toString())
-                                            .setValue(t);
-
+                                    fireDB.child("homework").child(subject.getSelectedItem().toString()).child(charter.getSelectedItem().toString()).child(chartername.getSelectedItem().toString()).setValue(Integer.parseInt(dataSnapshot.getValue().toString())+min);
                                     getActivity().runOnUiThread(new Runnable() {
                                         @Override
                                         public void run() {
