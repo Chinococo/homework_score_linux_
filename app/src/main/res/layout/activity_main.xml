@@ -1,0 +1,14 @@
+<androidx.viewpager.widget.ViewPager
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/viewpapger"
+    >
+<androidx.viewpager.widget.PagerTitleStrip
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/preview" />
+
+
+
+</androidx.viewpager.widget.ViewPager>

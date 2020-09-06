@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "316106296019",
+    "firebase_url": "https://braided-topic-207814.firebaseio.com",
+    "project_id": "braided-topic-207814",
+    "storage_bucket": "braided-topic-207814.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:316106296019:android:ec72285f94b698242be226",
+        "android_client_info": {
+          "package_name": "com.example.homework_score"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "316106296019-0a9q03jl4nt2bpr8p1kj0pnhs5s309m0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.homework_score",
+            "certificate_hash": "adfcdecfd440d769f324f63ee07716b8bf05d9eb"
+          }
+        },
+        {
+          "client_id": "316106296019-br08ijl77jcbbg2q7b5utb202dh9m5su.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBAhnUKP2HOqZmTu_mp8DBTWXCvCSjd0hw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "316106296019-br08ijl77jcbbg2q7b5utb202dh9m5su.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
