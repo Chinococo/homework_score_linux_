@@ -8,7 +8,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@drawable/p1">
 
         <Spinner
             android:id="@+id/Chaptername"
@@ -97,6 +98,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
+            android:background="#5B6BE91D"
             android:text="選擇"
             app:layout_constraintBottom_toBottomOf="@+id/date_t2"
             app:layout_constraintStart_toEndOf="@+id/date_t2"
@@ -128,6 +130,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
+            android:background="#5B6BE91D"
             android:text="送出"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
