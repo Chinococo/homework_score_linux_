@@ -28,12 +28,14 @@ import com.google.firebase.database.FirebaseDatabase;
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
 
+import java.text.Collator;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Set;
@@ -156,6 +158,7 @@ public class score extends Fragment {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 if (!subject.getSelectedItem().toString().equals("請選擇")) {
+                    //Comparator comparator = Collator.getInstance(java.util.Locale.TRADITIONAL_CHINESE);
                     for (String key : data.get(subject.getSelectedItem().toString()).keySet())
                         chartpter_data.add(key);
                     Chapter.setAdapter(new ArrayAdapter(getActivity(),
