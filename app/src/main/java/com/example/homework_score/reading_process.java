@@ -22,7 +22,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.text.Collator;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.HashMap;
 
 /**
@@ -32,6 +34,7 @@ import java.util.HashMap;
  */
 public class reading_process extends Fragment {
     String now, maxpage;
+    Comparator comparator = Collator.getInstance(java.util.Locale.CHINA);
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -84,7 +87,7 @@ public class reading_process extends Fragment {
         //upload();
         View view = inflater.inflate(R.layout.fragment_reading_process, container, false);
         spinner_data.clear();
-        spinner_data.add("請選擇");
+
         spinner = view.findViewById(R.id.book);
         enter = view.findViewById(R.id.enter_data);
         preview = view.findViewById(R.id.book_preview);
@@ -93,10 +96,13 @@ public class reading_process extends Fragment {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for (DataSnapshot key : dataSnapshot.getChildren()) {
                     spinner_data.add(key.getKey());
+                    Log.e("error",key.getKey());
                 }
                 getActivity().runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
+                        spinner_data.sort(comparator);
+                        spinner_data.add(0,"請選擇");
                         spinner.setAdapter(new ArrayAdapter(getActivity(),
                                 android.R.layout.simple_list_item_1,
                                 spinner_data));

@@ -53,45 +53,45 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-
-}
-class selection_screen extends FragmentPagerAdapter {
-    public selection_screen(FragmentManager fragment) {
-        super(fragment);
-    }
-
-    @Override
-    public Fragment getItem(int position) {
-        switch (position) {
-            case 0:
-                return new homework();
-            case 1:
-                return new score();
-            case 2:
-                return new reading_process();
+    class selection_screen extends FragmentPagerAdapter {
+        public selection_screen(FragmentManager fragment) {
+            super(fragment);
         }
-        return new Fragment();
-    }
 
-    @Override
-    public int getCount() {
-        return 3;
-    }
-
-    @Nullable
-    @Override
-    public CharSequence getPageTitle(int position) {
-        switch (position) {
-            case 0:
-                return "功課輸入器";
-            case 1:
-                return "分數輸入器";
-            case 2:
-                return "書本進度";
+        @Override
+        public Fragment getItem(int position) {
+            switch (position) {
+                case 0:
+                    return new homework();
+                case 1:
+                    return new score();
+                case 2:
+                    return new reading_process();
+            }
+            return new Fragment();
         }
-        return "error";
+
+        @Override
+        public int getCount() {
+            return 3;
+        }
+
+        @Nullable
+        @Override
+        public CharSequence getPageTitle(int position) {
+            switch (position) {
+                case 0:
+                    return "功課輸入器";
+                case 1:
+                    return "分數輸入器";
+                case 2:
+                    return "書本進度";
+            }
+            return "error";
+        }
+
+
     }
-
-
 }
+
 
